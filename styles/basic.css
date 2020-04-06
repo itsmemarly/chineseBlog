@@ -1,0 +1,423 @@
+/* Default styling */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+}
+
+
+/* Default for heading */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #444;
+    font-family: 'Averia Serif Libre', cursive;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    margin-left: 40px;
+}
+
+hr {
+    margin: 10px 0px;
+    opacity: .25;
+}
+
+
+/* Default for forms */
+
+form h2 {
+    margin: 25px auto;
+    text-align: center;
+    font-family: 'Averia Serif Libre', cursive;
+}
+
+form input {
+    width: 100%;
+    display: block;
+    padding: 13px 13px;
+    font-size: 1em;
+    margin: 5px auto 10px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background: transparent;
+    border: 1px solid #5F9EA0;
+}
+
+form input:focus {
+    outline: none;
+}
+
+
+/* Default for buttons */
+
+.btn {
+    color: white;
+    background: #6495ED;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    letter-spacing: .1em;
+    margin: 10px 0px;
+    padding: 13px 20px;
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0px auto;
+}
+
+
+/* Styling for navigator */
+
+.navigator {
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #5F9EA0;
+    border-radius: 0px 0px 6px 6px;
+}
+
+.navigator ul {
+    list-style-type: none;
+    float: right;
+}
+
+.navigator ul li {
+    float: left;
+    font-family: 'Noto Serif', serif;
+}
+
+.navigator ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 28px;
+    text-decoration: none;
+}
+
+.navigator ul li a:hover {
+    color: #b9e6f2;
+    font-size: 3em;
+    letter-spacing: 5px;
+    font-weight: 100;
+    font-family: 'Tangerine', cursive;
+}
+
+
+/* Styling for footer */
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: white;
+    background-color: #73707D;
+    text-align: center;
+    width: 80%;
+    margin: 20px auto 0px;
+    padding: 20px 0px;
+}
+
+
+/* Styling for banner */
+
+.banner {
+    margin: 5px auto;
+    min-height: 400px;
+    color: white;
+    border-radius: 5px;
+    background-image: url(../images/banner.jpeg);
+    background-size: 100% 100%;
+}
+
+.banner .welcome {
+    width: 45%;
+    float: left;
+    padding: 20px;
+}
+
+.banner .welcome h1 {
+    color: white;
+    margin: 25px 0px;
+    font-size: 2.4em;
+    font-family: 'Averia Serif Libre', cursive;
+}
+
+.banner .welcome p {
+    color: white;
+    font-size: 1.5em;
+    line-height: 1.8em;
+    font-family: 'Noto Serif', serif;
+}
+
+.banner .welcome p span {
+    font-size: .81em;
+    color: white;
+}
+
+.banner .welcome a {
+    width: 30%;
+    margin: 20px 0px;
+    padding: 12px 15px;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.banner .welcome a:hover {
+    background: #B9E6F2;
+}
+
+
+/* Styling for Login Form */
+
+.banner .login {
+    width: 50%;
+    float: left;
+}
+
+.banner .login form {
+    margin-top: 40px;
+}
+
+.banner .login form h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-family: 'Noto Serif', serif;
+}
+
+.banner .login form input {
+    width: 60%;
+    color: black;
+    border: 1px solid #5F9EA0;
+    margin: 10px auto;
+    letter-spacing: 1.3px;
+    font-family: 'Noto Serif', serif;
+}
+
+.banner .login form button {
+    display: block;
+    background: #6495ED;
+    margin-left: 20%;
+}
+
+.banner .login form button:hover {
+    background: #B9E6F2;
+}
+
+
+/* Styling for content(posts) */
+
+.watchContent {
+    margin: 5px auto;
+    border-radius: 5px;
+    min-height: 400px;
+}
+
+.watchContent:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.watchContent .contentTitle {
+    margin: 10px 0px;
+    color: black;
+    font-family: 'Averia Serif Libre', cursive;
+}
+
+.watchContent .post {
+    width: 335px;
+    margin: 9px;
+    min-height: 320px;
+    float: left;
+    border-radius: 2px;
+    border: 1px solid lightskyblue;
+    position: relative;
+}
+
+.watchContent .post .category {
+    margin-top: 0px;
+    padding: 3px 8px;
+    color: black;
+    background: white;
+    display: inline-block;
+    border-radius: 2px;
+    border: 1px solid black;
+    box-shadow: 3px 2px 2px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    z-index: 3;
+}
+
+.watchContent .post .category:hover {
+    box-shadow: 3px 2px 2px;
+    color: white;
+    background: black;
+    transition: .4s;
+    opacity: 1;
+}
+
+.watchContent .post .post_image {
+    height: 260px;
+    width: 100%;
+    background-size: 100%;
+}
+
+.watchContent .post .post_image {
+    width: 100%;
+    height: 260px;
+}
+
+.watchContent .post .post_info {
+    height: 100%;
+    padding: 0px 5px;
+    font-weight: 200;
+    font-family: 'Noto Serif', serif;
+}
+
+.watchContent .post .post_info {
+    color: black;
+}
+
+.watchContent .post .post_info span {
+    color: #5F9EA0;
+    font-style: italic;
+}
+
+.watchContent .post .post_info span.read_more {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+
+/* Styling for single post page */
+
+.watchContent .post-wrapper {
+    width: 70%;
+    float: left;
+    min-height: 250px;
+}
+
+.full-post-div {
+    min-height: 300px;
+    padding: 20px;
+    border: 1px solid #e4e1e1;
+    border-radius: 2px;
+}
+
+.full-post-div h2.post-title {
+    margin: 10px auto 20px;
+    text-align: center;
+}
+
+.post-body-div {
+    font-family: 'Noto Serif', serif;
+    font-size: 1.2em;
+}
+
+.post-body-div p {
+    margin: 20px 0px;
+}
+
+.post-sidebar {
+    width: 24%;
+    float: left;
+    margin-left: 5px;
+    min-height: 400px;
+}
+
+.watchContent .post-comments {
+    margin-top: 25px;
+    border-radius: 2px;
+    border-top: 1px solid #e4e1e1;
+    padding: 10px;
+}
+
+.post-sidebar .card {
+    width: 95%;
+    margin: 10px auto;
+    border: 1px solid #e4e1e1;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.post-sidebar .card .card-header {
+    padding: 10px;
+    text-align: center;
+    border-radius: 3px 3px 0px 0px;
+    background: #5F9EA0;
+}
+
+.post-sidebar .card .card-header h2 {
+    color: white;
+}
+
+.post-sidebar .card .card-content a {
+    display: block;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border-bottom: 1px solid #e4e1e1;
+    color: #444;
+}
+
+.post-sidebar .card .card-content a:hover {
+    padding-left: 20px;
+    background: #F9F9F9;
+    transition: 0.1s;
+}
+
+
+/* styling for the notifications */
+
+.message {
+    width: 100%;
+    margin: 0px auto;
+    padding: 10px 0px;
+    color: darkolivegreen;
+    background: #dff0d8;
+    border: 1px solid darkolivegreen;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.error {
+    color: darkred;
+    background: #f2dede;
+    border: 1px solid darkred;
+    margin-bottom: 20px;
+}
+
+.validation_errors p {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.logged_in_info {
+    text-align: right;
+    padding: 10px;
+}
