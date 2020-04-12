@@ -1,11 +1,12 @@
-<?php include_once('serverSide/config.php');
-include_once('sorted/publicSide.php'); 
+<?php include('serverSide/config.php');
+include('sorted/publicSide.php'); 
 
 	// Get posts under a specific topic
 	if (isset($_GET['topic'])) {
 		$topic_id = $_GET['topic'];
 		$posts = getPublishedPostsByTopic($topic_id);
-    }
+	}
+	$topics = getAllTopics();
     ?>
     <!DOCTYPE html>
     <html>
@@ -19,7 +20,7 @@ include_once('sorted/publicSide.php');
 <body>
 <div class="container">
 <!-- Get navigator -->
-	<?php include( ROOT_PATH . 'headers/navigator.php'); ?>
+	<?php include('headers/navigator.php'); ?>
 <!-- // End of the navigator -->
 <!-- Start content -->
 <div class="watchContent">
@@ -27,10 +28,25 @@ include_once('sorted/publicSide.php');
 		Articles on <u><?php echo getTopicNameById($topic_id); ?></u>
 	</h2>
 	<hr>
+	<div class="post-sidebar" style="float: left;">
+			<div class="card">
+				<div class="card-header">
+					<h2>Topics</h2>
+				</div>
+				<div class="card-content">
+					<?php foreach ($topics as $topic): ?>
+						<a href="<?php echo BASE_URL . 'filter_post.php?topic=' . $topic['id'] ?>">
+							<?php echo $topic['name']; ?>
+						</a> 
+					<?php endforeach ?>
+				</div>
+			</div>
+		</div>
+
 	<?php foreach ($posts as $post): ?>
 		<div class="post" style="margin-left: 0px;">
 			<img src="<?php echo BASE_URL . 'images/' . $post['image']; ?>" class="post_image" alt="">
-			<a href="single_post.php?post-slug=<?php echo $post['slug']; ?>">
+			<a href="one_post.php?post-slug=<?php echo $post['slug']; ?>">
 				<div class="post_info">
 					<h3><?php echo $post['title'] ?></h3>
 					<div class="info">
@@ -41,11 +57,12 @@ include_once('sorted/publicSide.php');
 			</a>
 		</div>
 	<?php endforeach ?>
+	</div>
 </div>
 <!-- // End content -->
-</div>
+
 <!-- // End container -->
 
 <!-- Start footer -->
-	<?php include( ROOT_PATH . 'footers/mainFooter.php'); ?>
+	<?php include('footers/mainFooter.php'); ?>
 <!-- // End footer -->

@@ -10,11 +10,11 @@
         <h1>Reason to Join:</h1>
         
         <p>
-            Inspire others 
-            and 
-            get inspired. <br>
+            Get inspired & <br>
+            inspire others <br>
             <span> ~ Marleen</span>
         </p>
+        
         <a href="registration.php" class="btn">JOIN NOW!</a>
     </div>
     <div class="login_div">
