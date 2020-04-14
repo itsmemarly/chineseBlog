@@ -36,7 +36,7 @@ include('sorted/publicSide.php');
 				<div class="card-content">
 					<?php foreach ($topics as $topic): ?>
 						<a href="<?php echo BASE_URL . 'filter_post.php?topic=' . $topic['id'] ?>">
-							<?php echo $topic['name']; ?>
+							<?php echo $topic['topic_name']; ?>
 						</a> 
 					<?php endforeach ?>
 				</div>

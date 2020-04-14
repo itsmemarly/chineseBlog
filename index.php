@@ -42,12 +42,12 @@
 <!-- Add this ... -->
 <?php foreach ($posts as $post): ?>
 	<div class="post" style="margin-left: 0px;">
-		<img src="<?php echo BASE_URL . 'images/' . $post['image']; ?>" class="post_image" alt="">
-		<?php if (isset($post['topic']['name'])): ?>
+		<img src="<?php echo BASE_URL . 'images/' . $post['post_image']; ?>" class="post_image" alt="">
+		<?php if (isset($post['topic']['topic_name'])): ?>
 			<a 
 				href="<?php echo BASE_URL . 'filter_posts.php?topic=' . $post['topic']['id'] ?>"
 				class="btn category">
-				<?php echo $post['topic']['name'] ?>
+				<?php echo $post['topic']['topic_name'] ?>
 			</a>
 		<?php endif ?>
 

@@ -35,7 +35,7 @@
 					<option value="" selected disabled>Choose topic:</option>
 					<?php foreach ($topics as $topic): ?>
 						<option value="<?php echo $topic['id']; ?>">
-							<?php echo $topic['name']; ?>
+							<?php echo $topic['topic_name']; ?>
 						</option>
 					<?php endforeach ?>
 				</select>

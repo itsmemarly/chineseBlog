@@ -16,7 +16,7 @@
 		<!-- Middle form - to create and edit -->
 		<div class="action">
 			<h1 class="page-title">Create / Edit Topics</h1>
-			<form method="post" action="topics.php" >
+			<form method="post" action="<?php echo BASE_URL . 'admin/topics.php'; ?>" >
 				<!-- validation errors for the form -->
 				<?php include('../sorted/errors.php') ?>
 				<!-- if editing topic, the id is required to identify that topic -->
@@ -28,7 +28,7 @@
 				<?php if ($isEditingTopic === true): ?> 
 					<button type="submit" class="btn" name="update_topic">UPDATE</button>
 				<?php else: ?>
-					<button type="submit" class="btn" name="create_topic">Save Topic</button>
+					<button type="submit" class="btn" name="create_topic">SAVE</button>
 				<?php endif ?>
 			</form>
 		</div>
@@ -52,8 +52,8 @@
 					<?php foreach ($topics as $key => $topic): ?>
 						<tr>
 							<td><?php echo $key + 1; ?></td>
-                            <td><?php echo $topic['name']; ?></td>
-                            <td><?php echo $topic['slug']; ?></td>
+                            <td><?php echo $topic['topic_name']; ?></td>
+                            <td><?php echo $topic['topic_slug']; ?></td>
 							<td>
 								<a class="fa fa-pencil btn edit"
 									href="topics.php?edit-topic=<?php echo $topic['id'] ?>">

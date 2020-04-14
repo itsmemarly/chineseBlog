@@ -18,6 +18,23 @@
 	
 	<div class="watchContent" >
 		<!-- Page wrapper -->
+		
+		<!-- post sidebar -->
+		<div class="post-sidebar" style="float: left;">
+			<div class="card">
+				<div class="card-header">
+					<h2>Topics</h2>
+				</div>
+				<div class="card-content">
+					<?php foreach ($topics as $topic): ?>
+						<a href="<?php echo BASE_URL . 'filter_post.php?topic=' . $topic['id'] ?>">
+							<?php echo $topic['topic_name']; ?>
+						</a> 
+					<?php endforeach ?>
+				</div>
+			</div>
+		</div>
+		<!-- // post sidebar -->
 		<div class="post-wrapper">
 			<!-- full post div -->
 			<div class="full-post-div">
@@ -37,22 +54,6 @@
 		</div>
 		<!-- // Page wrapper -->
 
-		<!-- post sidebar -->
-		<div class="post-sidebar">
-			<div class="card">
-				<div class="card-header">
-					<h2>Topics</h2>
-				</div>
-				<div class="card-content">
-					<?php foreach ($topics as $topic): ?>
-						<a href="<?php echo BASE_URL . 'filter_post.php?topic=' . $topic['id'] ?>">
-							<?php echo $topic['name']; ?>
-						</a> 
-					<?php endforeach ?>
-				</div>
-			</div>
-		</div>
-		<!-- // post sidebar -->
 	</div>
 </div>
 <!-- // content -->

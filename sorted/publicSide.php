@@ -53,10 +53,10 @@ function getPublishedPostsByTopic($topic_id) {
 function getTopicNameById($id)
 {
 	global $conn;
-	$sql = "SELECT name FROM topics WHERE id=$id";
+	$sql = "SELECT topic_name FROM topics WHERE id=$id";
 	$result = mysqli_query($conn, $sql);
 	$topic = mysqli_fetch_assoc($result);
-	return $topic['name'];
+	return $topic['topic_name'];
 }
 
 // Return only one post

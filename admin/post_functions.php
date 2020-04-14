@@ -103,11 +103,11 @@ function createPost($request_values)
 		}
 		// create post if there are no errors in the form
 		if (count($errors) == 0) {
-			$query = "INSERT INTO posts (user_id, title, slug, image, body, published, created_at, updated_at) VALUES(1, '$title', '$post_slug', '$featured_image', '$body', $published, now(), now())";
+			$query = "INSERT INTO posts (user_id, title, slug, post_image, body, published, created_at, updated_at) VALUES(1, '$title', '$post_slug', '$featured_image', '$body', $published, now(), now())";
 			if(mysqli_query($conn, $query)){ // if post created successfully
 				$inserted_post_id = mysqli_insert_id($conn);
 				// create relationship between post and topic
-				$sql = "INSERT INTO post_topic (post_id, topic_id) VALUES($inserted_post_id, $topic_id)";
+				$sql = "INSERT INTO post_topic(post_id, topic_id) VALUES($inserted_post_id, $topic_id)";
 				mysqli_query($conn, $sql);
 
 				$_SESSION['message'] = "Post created successfully";
@@ -130,7 +130,7 @@ function createPost($request_values)
 		$post = mysqli_fetch_assoc($result);
 		// set form values on the form to be updated
         $title = $post['title'];
-        $featured_image = $post['image'];
+        $featured_image = $post['post_image'];
         $body = $post['body'];
 		$published = $post['published'];
 	}
@@ -140,7 +140,7 @@ function createPost($request_values)
 		global $conn, $errors, $post_id, $title, $featured_image, $topic_id, $body, $published;
 
         $title = esc($request_values['title']);
-        $featured_image = $post['image'];
+        // $featured_image = $_GET['image'];
 		$body = esc($request_values['body']);
 		$post_id = esc($request_values['post_id']);
 		if (isset($request_values['topic_id'])) {
@@ -164,13 +164,13 @@ function createPost($request_values)
 
 		// register topic if there are no errors in the form
 		if (count($errors) == 0) {
-			$query = "UPDATE posts SET title='$title', slug='$post_slug', views=0, image='$featured_image', body='$body', published=$published, updated_at=now() WHERE id=$post_id";
+			$query = "UPDATE posts SET title='$title', slug='$post_slug', views=0, post_image='$featured_image', body='$body', published=$published, updated_at=now() WHERE id=$post_id";
 			// attach topic to post on post_topic table
 			if(mysqli_query($conn, $query)){ // if post created successfully
 				if (isset($topic_id)) {
 					$inserted_post_id = mysqli_insert_id($conn);
 					// create relationship between post and topic
-					$sql = "INSERT INTO post_topic ($post_id, $topic_id) VALUES($inserted_post_id, $topic_id)";
+					$sql = "UPDATE post_topic SET post_id='$post_id', topic_id='$topic_id'";
 					mysqli_query($conn, $sql);
 					$_SESSION['message'] = "Post created successfully";
 					header('location: posts.php');
