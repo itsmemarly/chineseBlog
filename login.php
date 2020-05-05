@@ -2,6 +2,11 @@
 <?php  include('sorted/registration_login.php'); ?>
 <?php  include('headers/head.php'); ?>
 	<title>Chinese Blog | Sign in </title>
+		<!-- Google Font -->
+		<link href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Noto+Serif|Tangerine" rel="stylesheet">
+	
+	<!-- Styling for public pages -->
+	<link rel="stylesheet" type="text/css" href="styles/basic.css">
 </head>
 <body>
 <div class="container">
@@ -17,7 +22,7 @@
 			<input type="password" name="password" placeholder="Password">
 			<button type="submit" class="btn" name="login_btn">Login</button>
 			<p>
-				Not yet a member? <a href="registration.php">Sign up</a>
+				Not yet an admin or user? <a href="registration.php">Sign up as an user</a>
 			</p>
 		</form>
 	</div>

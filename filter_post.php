@@ -45,7 +45,7 @@ include('sorted/publicSide.php');
 
 	<?php foreach ($posts as $post): ?>
 		<div class="post" style="margin-left: 0px;">
-			<img src="<?php echo BASE_URL . 'images/' . $post['image']; ?>" class="post_image" alt="">
+			<img src="<?php echo BASE_URL . 'images/' . $post['post_image']; ?>" class="post_image" alt="">
 			<a href="one_post.php?post-slug=<?php echo $post['slug']; ?>">
 				<div class="post_info">
 					<h3><?php echo $post['title'] ?></h3>

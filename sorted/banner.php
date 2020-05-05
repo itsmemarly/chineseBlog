@@ -18,9 +18,10 @@
         <a href="registration.php" class="btn">JOIN NOW!</a>
     </div>
     <div class="login_div">
+    
         <form action="<?php echo BASE_URL . 'index.php'; ?>" method="post">
             <h2>Login</h2>
-            <div style="width: 60%; margin: 0px auto;">
+            <div style="width: 40%; margin: 0px auto; margin-right: 50px;">
             <?php include('errors.php') ?>
             </div>
             <input type="text" name="username" value="<?php echo $username; ?>" placeholder="Username">

@@ -30,12 +30,8 @@
 	include('headers/navigator.php');
 	?>
 
-	<?php
-	include('sorted/banner.php');
-	?> 
-<!-- All content  -->	
 <div class="watchContent">
-	<h2 class="contentTitle">Recent Articles:</h2>
+	<h2 class="contentTitle">All Articles:</h2>
 	<hr>
 <!-- more content still to come here ... -->
 

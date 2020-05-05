@@ -6,9 +6,9 @@
 		</div>
 		<ul class="navigatorUl">
 			<li><a class="active" href="index.php">Home</a></li>
-			<li><a href="#news">News</a></li>
-			<li><a href="#contact">Contact</a></li>
-			<li><a href="#about"></a></li>
+			<li><a href="about.php">About</a></li>
+			<li><a href="posts.php">Posts</a></li>
+			<li><a href="login.php">Admin login</a></li>
 		</ul>
 	</div>
 
